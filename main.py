@@ -21,7 +21,6 @@ def pi(limit=100000000000000):
     n = c
     a = 1
     d = -1
-
     while abs(n) != pp and d < limit:
         n += a * (4/d)
         d += 2
