@@ -1,17 +1,25 @@
 import numpy
 import math
 import time
-import twilio
+import twilio.rest as twil
+
+sid = "ACee46d15aee42ece35152b01a0cf0db61"
+tokensid = 'a16dc9df73edf829357d5354e5802147'
 pp = numpy.pi
 
-def pi(limit=1000000):
+
+def send_text(message):
+    twil.Client(sid, tokensid).messages.create(body=message, from_='+15873285525', to='+15874340118').sid
+
+
+def pi(limit=100000000000000):
     start = time.time()
     c = 4
     n = c
     a = 1
     d = -1
 
-    while abs(n) != pp:
+    while abs(n) != pp and d < limit:
         n += a * (4/d)
         d += 2
         if d % 30000000 == 1:
@@ -29,6 +37,7 @@ def pi(limit=1000000):
     finish = time.time() - start
     print(finish)
     print(f'{n}\n{numpy.pi}\n{math.pi}')
-    return n
+    return n, finish
 
-pi()
+
+send_text(str(pi()))
