@@ -2,7 +2,7 @@ import numpy
 import math
 
 
-def pi(limit=100000):
+def pi(limit=1000000):
     c = 4
     n = c
     a = 1
