@@ -9,7 +9,11 @@ pp = numpy.pi
 
 
 def send_text(message):
-    twil.Client(sid, tokensid).messages.create(body=message, from_='+15873285525', to='+15874340118').sid
+    try:
+        twil.Client(sid, tokensid).messages.create(body=message, from_='+15873285525', to='+15874340118').sid
+    except Exception as e:
+        print(f'FAILED TO SEND TEXT:\n{e}')
+
 
 
 def pi(limit=100000000000000):
