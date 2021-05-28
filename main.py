@@ -40,4 +40,5 @@ def pi(limit=100000000000000):
     return n, finish
 
 
+print('sending message after completion with time')
 send_text(str(pi()))
