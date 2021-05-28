@@ -25,7 +25,7 @@ def pi(limit=100000000000000):
     while abs(n) != pp and d < limit:
         n += a * (4/d)
         d += 2
-        if d % 30000000 == 1:
+        if d % 100000000 == 1:
             t = f'{abs(n):.15f}'
             print(f'working with: {t}\t{d}')
             print(f'What we need: {pp}')
