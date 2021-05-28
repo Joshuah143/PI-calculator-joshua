@@ -15,7 +15,6 @@ def send_text(message):
         print(f'FAILED TO SEND TEXT:\n{e}')
 
 
-
 def pi(limit=100000000000000):
     start = time.time()
     c = 4
