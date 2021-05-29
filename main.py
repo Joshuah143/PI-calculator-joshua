@@ -115,7 +115,8 @@ def pi2time(timelimit=30):
     print(f'p2: {final}\nEx: {numpy.pi}')
 
 
-test_time = 30
-pi1time(timelimit=test_time)
-pi2time(timelimit=test_time)
+if __name__ == '__main__':
+    test_time = 30
+    pi1time(timelimit=test_time)
+    pi2time(timelimit=test_time)
 
