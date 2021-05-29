@@ -42,5 +42,19 @@ def pi(limit=100000000000000):
     return n, finish
 
 
-print('sending message after completion with time')
-send_text(str(pi()))
+def pi2(limit):
+    num = 2
+    den = 1
+    final = 1
+    flip = 0
+    for i in limit:
+        print(i)
+        final = final * (num/den)
+        if flip % 2 == 0:
+            den += 1
+        elif flip % 2 == 1:
+            num += 1
+    print(final)
+
+
+pi2(2)
