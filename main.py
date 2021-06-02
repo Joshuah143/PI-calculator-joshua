@@ -64,6 +64,18 @@ def pi2(limit=10000000):
     print(i)
 
 
+def pi3(n=10000000000000000000000000000000000000000000000000000):
+    n = int(n)
+    d = 360/n
+    rd = (180-d)/2
+    r = 1
+    diamiter = 2
+    e = (r * float(numpy.sin(d * numpy.pi / 180.)))/float(numpy.sin(rd* numpy.pi / 180.))
+    circum = e * n
+    pivalue = circum / diamiter
+    return pivalue
+
+
 def pi1time(timelimit=30):
     start = time.time()
     c = 4
@@ -115,8 +127,14 @@ def pi2time(timelimit=30):
     print(f'p2: {final}\nEx: {numpy.pi}')
 
 
-if __name__ == '__main__':
+if __name__ == '__ma in__':
     test_time = 30
     pi1time(timelimit=test_time)
     pi2time(timelimit=test_time)
 
+starttime = time.time()
+calculated = float(pi3(n=10000000000000000000000000000000000000000000000000000))
+fin = starttime - time.time()
+print(f'{calculated:.30}')
+print(f'{numpy.pi:.30}')
+print(fin)
