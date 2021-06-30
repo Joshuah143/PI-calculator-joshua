@@ -4,16 +4,7 @@ import time
 import twilio.rest as twil
 
 
-sid = "ACee46d15aee42ece35152b01a0cf0db61"
-tokensid = 'a16dc9df73edf829357d5354e5802147'
 pp = numpy.pi
-
-
-def send_text(message):
-    try:
-        twil.Client(sid, tokensid).messages.create(body=message, from_='+15873285525', to='+15874340118').sid
-    except Exception as e:
-        print(f'FAILED TO SEND TEXT:\n{e}')
 
 
 def pi(limit=100000000000000):
